@@ -15,6 +15,7 @@ Better syntax highlighting
 Linter for various languages
 
 [GitGutter](http://www.vim.org/scripts/script.php?script_id=2736)
+Shows git diff for lines
 
 ###Colors
 [Molokai](http://www.vim.org/scripts/script.php?script_id=2340)
