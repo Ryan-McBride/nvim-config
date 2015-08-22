@@ -21,4 +21,4 @@ Shows git diff for lines
 [Molokai](http://www.vim.org/scripts/script.php?script_id=2340)
 
 ###Configuration
-see [.vnvimrc](https://github.com/Ryan-McBride/nvim-config/blob/master/nvimrc)
+see [.nvimrc](https://github.com/Ryan-McBride/nvim-config/blob/master/nvimrc)
