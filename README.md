@@ -1,8 +1,8 @@
 # nvim-config
-My nvim configuration, and info on plugins I use
+My Neo Vim configuration, and info on plugins I use
 
 ###Neo Vim
-[nvim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+[Neo Vim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 
 ###Plugins
 [Pathogen](https://github.com/tpope/vim-pathogen)
