@@ -35,6 +35,7 @@ map s :w <CR>
 map qq :q <CR>
 map ct :tabclose <CR>
 map nt :tabnew <CR>
+map tt :tabe
 
 "plugins:
 filetype plugin on
