@@ -10,7 +10,6 @@ set ignorecase
 set number
 set showmatch
 set mat=3
-color moria
 
 "pretty stuff
 syntax on
