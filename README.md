@@ -14,7 +14,7 @@ Better syntax highlighting
 [Syntastic](http://www.vim.org/scripts/script.php?script_id=2736)
 Linter for various languages
 
-[GitGutter](http://www.vim.org/scripts/script.php?script_id=2736)
+[GitGutter](https://github.com/airblade/vim-gitgutter)
 Shows git diff for lines
 
 ###Colors
