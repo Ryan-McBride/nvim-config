@@ -3,6 +3,7 @@ execute pathogen#infect()
 
 "general
 set autoread
+set noerrorbells
 
 "UI
 set ruler
@@ -11,6 +12,7 @@ set number
 set showmatch
 set mat=3
 color moria
+set guifont=Hack
 
 "pretty stuff
 syntax on
@@ -33,11 +35,15 @@ set tabstop=2
 "remaps
 map s :w <CR>
 map qq :q <CR>
-map ct :tabclose <CR>
-map nt :tabnew <CR>
+map nt :NERDTreeTabsToggle <CR>
+inoremap ( ()<Left>
+inoremap <expr> ) strpart(getline('.'), col('.')-1, 1) == ")" ? "<Right>" : ")" 
+inoremap [ []<Left>
+inoremap <expr> ] strpart(getline('.'), col('.')-1, 1) == "]" ? "<Right>" : "]" 
+inoremap { {}<Left>
+inoremap <expr> } strpart(getline('.'), col('.')-1, 1) == "}" ? "<Right>" : "}" 
 
 "plugins:
-filetype plugin on
 
   "syntastic
   set statusline+=%#warningmsg#
@@ -50,3 +56,7 @@ filetype plugin on
   let g:syntastic_auto_loc_list = 1
   let g:syntastic_check_on_open = 1
   let g:syntastic_check_on_wq = 0
+
+  "airline
+  set laststatus=2
+  let g:airline_powerline_fonts = 1 
