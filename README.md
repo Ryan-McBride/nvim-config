@@ -1,8 +1,8 @@
 # nvim-config
-My nvim configuration, and info on plugins I use
+My Neo Vim configuration, and info on plugins I use
 
 ###Neo Vim
-[nvim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+[Neo Vim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 
 ###Plugins
 [Pathogen](https://github.com/tpope/vim-pathogen)
@@ -14,7 +14,7 @@ Better syntax highlighting
 [Syntastic](http://www.vim.org/scripts/script.php?script_id=2736)
 Linter for various languages
 
-[GitGutter](http://www.vim.org/scripts/script.php?script_id=2736)
+[GitGutter](https://github.com/airblade/vim-gitgutter)
 Shows git diff for lines
 
 [NerdTree](http://www.vim.org/scripts/script.php?script_id=1658)
@@ -30,4 +30,4 @@ Cool infobar at the bottom of vim
 [Molokai](http://www.vim.org/scripts/script.php?script_id=2340)
 
 ###Configuration
-see vrc file
+see [.nvimrc](https://github.com/Ryan-McBride/nvim-config/blob/master/nvimrc)

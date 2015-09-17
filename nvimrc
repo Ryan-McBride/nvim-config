@@ -36,6 +36,7 @@ set tabstop=2
 map s :w <CR>
 map qq :q <CR>
 map nt :NERDTreeTabsToggle <CR>
+map tt :tabe
 inoremap ( ()<Left>
 inoremap <expr> ) strpart(getline('.'), col('.')-1, 1) == ")" ? "<Right>" : ")" 
 inoremap [ []<Left>
