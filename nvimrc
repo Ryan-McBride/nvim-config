@@ -1,9 +1,8 @@
 "pathogen
 execute pathogen#infect()
-
+filetype plugin on
 "general
 set autoread
-set noerrorbells
 
 "UI
 set ruler
@@ -33,16 +32,19 @@ set shiftwidth=2
 set tabstop=2
 
 "remaps
-map s :w <CR>
-map qq :q <CR>
-map nt :NERDTreeTabsToggle <CR>
-map tt :tabe
+nmap s :w <CR>
+nmap qq :q <CR>
+nmap nt :NERDTreeTabsToggle <CR>
 inoremap ( ()<Left>
 inoremap <expr> ) strpart(getline('.'), col('.')-1, 1) == ")" ? "<Right>" : ")" 
 inoremap [ []<Left>
 inoremap <expr> ] strpart(getline('.'), col('.')-1, 1) == "]" ? "<Right>" : "]" 
 inoremap { {}<Left>
 inoremap <expr> } strpart(getline('.'), col('.')-1, 1) == "}" ? "<Right>" : "}" 
+
+" Quickly edit / reload .vimrc
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 "plugins:
 
@@ -54,10 +56,12 @@ inoremap <expr> } strpart(getline('.'), col('.')-1, 1) == "}" ? "<Right>" : "}"
   let g:syntastic_html_tidy_ignore_errors=[" lacks \"action\" attribute"]
   let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute "]
   let g:syntastic_always_populate_loc_list = 1
-  let g:syntastic_auto_loc_list = 1
+  let g:syntastic_auto_loc_list = 0
   let g:syntastic_check_on_open = 1
   let g:syntastic_check_on_wq = 0
 
   "airline
   set laststatus=2
+  let g:airline#extensions#branch#enabled = 1
+  let g:airline#extensions#tabline#enabled = 1
   let g:airline_powerline_fonts = 1 
