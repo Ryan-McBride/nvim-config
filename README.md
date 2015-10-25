@@ -26,8 +26,10 @@ Makes NerdTree work better with vim tabs
 [Nerd Commenter](http://www.vim.org/scripts/script.php?script_id=1218)
 Better commenting
 
-[Airline](https://github.com/jistr/vim-nerdtree-tabs)
+[Airline](https://github.com/bling/vim-airline)
 Cool infobar at the bottom of vim
+
+[YouCompleteMe](https://valloric.github.io/YouCompleteMe/)
 
 ###Colors
 [Molokai](http://www.vim.org/scripts/script.php?script_id=2340)
