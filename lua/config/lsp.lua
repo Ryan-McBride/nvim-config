@@ -4,8 +4,44 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 local ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if ok then capabilities = cmp_nvim_lsp.default_capabilities(capabilities) end
 
--- Disable TypeScript server diagnostics in favor of ESLint; keep language features off
--- By not starting tsserver/ts_ls we avoid duplicate diagnostics entirely
+-- TypeScript/JS language server (tsserver successor in lspconfig is ts_ls)
+lsp.ts_ls.setup({
+  capabilities = capabilities,
+  handlers = {
+    ["textDocument/publishDiagnostics"] = function(err, result, ctx, config)
+      if result and result.diagnostics then
+        local filtered = {}
+        local ignore = {
+          [6133] = true,
+          [6196] = true,
+          [7027] = true,
+          [80001] = true,
+        }
+        for _, d in ipairs(result.diagnostics) do
+          if not (d.code and ignore[tonumber(d.code)]) then
+            table.insert(filtered, d)
+          end
+        end
+        result.diagnostics = filtered
+      end
+      return vim.lsp.handlers["textDocument/publishDiagnostics"](err, result, ctx, config)
+    end,
+  },
+  settings = {
+    typescript = {
+      preferences = {
+        includeCompletionsForModuleExports = true,
+        includeAutomaticOptionalChainCompletions = true,
+      },
+    },
+    javascript = {
+      preferences = {
+        includeCompletionsForModuleExports = true,
+        includeAutomaticOptionalChainCompletions = true,
+      },
+    },
+  },
+})
 
 -- ESLint using eslint_d
 lsp.eslint.setup({
