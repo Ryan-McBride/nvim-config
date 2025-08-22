@@ -19,6 +19,13 @@ return {
           icons = { show = { file = true, folder = true, git = true, folder_arrow = true } },
         },
         actions = { open_file = { quit_on_open = false } },
+        on_attach = function(bufnr)
+          local api = require("nvim-tree.api")
+          local opts = { buffer = bufnr, noremap = true, silent = true, nowait = true }
+          vim.keymap.set("n", "<CR>", api.node.open.tab_drop, opts)
+          vim.keymap.set("n", "o",    api.node.open.tab_drop, opts)
+          vim.keymap.set("n", "<2-LeftMouse>", api.node.open.tab_drop, opts)
+        end,
       })
     end,
   },
