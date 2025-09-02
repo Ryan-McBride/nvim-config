@@ -26,3 +26,4 @@ require("config.lazy")
 
 -- lsp config
 pcall(require, "config.lsp")
+
