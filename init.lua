@@ -18,9 +18,6 @@ vim.g.nobakcup = true -- disables backup files
 vim.g.mapleader = ' ' -- sets leader to space
 vim.opt.termguicolors = true
 
---remaps
-local map = require('utils').map
-
 -- lazy package manager
 require("config.lazy")
 
