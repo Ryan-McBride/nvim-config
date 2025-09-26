@@ -19,6 +19,7 @@ return {
           icons = { show = { file = true, folder = true, git = true, folder_arrow = true } },
         },
         actions = { open_file = { quit_on_open = false } },
+        auto_close = true,
       })
     end,
   },

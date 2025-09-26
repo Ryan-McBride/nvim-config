@@ -11,9 +11,12 @@ return {
     animation = true,
   },
   keys = {
-    -- Restore original gt/gT behavior for visual tab order navigation
+    -- Navigation
     { 'gt', '<Cmd>BufferNext<CR>', desc = 'Next tab' },
     { 'gT', '<Cmd>BufferPrevious<CR>', desc = 'Previous tab' },
+    -- Close current buffer
+    { '<leader>x', '<Cmd>BufferClose<CR>', desc = 'Close buffer' },
+    { '<leader>X', '<Cmd>BufferCloseAllButCurrent<CR>', desc = 'Close all but current' },
   },
   version = '^1.0.0', -- optional: only update when a new 1.x version is released
 }
